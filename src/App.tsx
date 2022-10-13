@@ -1,13 +1,13 @@
-import "./App.css";
-import Chart from "./components/Chart";
-import Table from "./components/Table";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import HomePage from "./pages/HomePage";
+
+const queryClient = new QueryClient();
 
 const App = () => {
   return (
-    <div className="App">
-      <Chart />
-      <Table />
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <HomePage />
+    </QueryClientProvider>
   );
 };
 
