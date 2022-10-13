@@ -1,8 +1,7 @@
-import React from "react";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 
-const options = {
+const options: Highcharts.Options = {
   chart: {
     type: "spline",
   },
@@ -11,6 +10,7 @@ const options = {
   },
   series: [
     {
+      type: "spline",
       data: [1, 2, 1, 4, 3, 6],
     },
   ],
